@@ -1,0 +1,7 @@
+include ':airlocationlibrary'
+include ':di'
+include ':utils'
+include ':base'
+include ':data'
+include ':app'
+rootProject.name = "NearBy App"

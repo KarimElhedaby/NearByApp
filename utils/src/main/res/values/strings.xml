@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">utils</string>
+    <string name="upload_image_permission">We need this permission to can upload images</string>
+    <string name="settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="access_location_permission">We need this permission to can access your location</string>
+    <string name="server_connect_error">Error connecting to server Please try again later</string>
+</resources>

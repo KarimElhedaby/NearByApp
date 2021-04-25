@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <slide
+        android:duration="250"
+        android:slideEdge="top">
+        <targets>
+            <target android:targetId="@+id/loginHeader" />
+        </targets>
+    </slide>
+
+
+    <slide
+        android:duration="250"
+        android:slideEdge="top"
+        android:startDelay="25">
+        <targets>
+            <target android:targetId="@+id/emailEditText" />
+            <target android:targetId="@+id/passHolder" />
+            <target android:targetId="@+id/emailHeader" />
+            <target android:targetId="@+id/passHeader" />
+            <target android:targetId="@+id/forgotPassTV" />
+        </targets>
+    </slide>
+
+
+    <slide
+        android:duration="250"
+        android:slideEdge="bottom"
+        android:startDelay="50">
+        <targets>
+            <target android:targetId="@+id/loginBtn" />
+            <target android:targetId="@+id/facebookLayout" />
+            <target android:targetId="@+id/footerTV" />
+            <target android:targetId="@+id/signupBtn" />
+            <target android:targetId="@+id/fbLoginBtn" />
+            <target android:targetId="@+id/googleLayout" />
+        </targets>
+    </slide>
+
+</transitionSet>

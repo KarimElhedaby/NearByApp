@@ -1,0 +1,162 @@
+ext {
+    //Android
+    androidBuildToolsVersion = "29.0.3"
+    androidMinSdkVersion = 19
+    androidTargetSdkVersion = 29
+    androidCompileSdkVersion = 29
+    androidVersionCode = 1
+    androidVersionName = "1.0"
+    kotlinVersion = '1.3.61'
+
+    //Library
+    material = "1.0.0"
+    localBroadcastManager = "1.0.0"
+    appCompatX = '1.1.0'
+    constraintLayout = '1.1.3'
+    rxJavaVersion = '2.2.10'
+    rxKotlinVersion = '2.3.0'
+    rxAndroidVersion = '2.1.1'
+    //Glide
+    glide = '4.10.0'
+    glideCompiler = '4.10.0'
+    glideInterceptor = '4.8.0'
+    glideTransformation = '3.3.0'
+    lifecycleVersion = '2.2.0'
+    roomVersion = '2.2.2'
+    koinVersion = '2.0.1'
+    timberVersion = '4.7.1'
+    gson = '2.8.5'
+    dexter = '6.0.1'
+    retro = '2.6.2'
+    retroRX = '1.0.0'
+    gson = '2.8.6'
+    okhttp = '4.2.2'
+    okhttpConnection = '4.2.2'
+    okhttpInterceptor = '4.2.2'
+    timber = '4.7.1'
+    multiDex = '2.0.1'
+
+    roomVersion  = '2.1.0'
+    roomCompiler = '2.1.0'
+
+
+    baseDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            appCompat          : "androidx.appcompat:appcompat:${appCompatX}",
+            coreKtx            : "androidx.core:core-ktx:${appCompatX}",
+
+            rxJava             : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxKotlin           : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+
+
+            constraintLayout   : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            material           : "com.google.android.material:material:${material}",
+            palette            : "androidx.palette:palette:${material}",
+
+
+            extension          : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+
+            glide              : "com.github.bumptech.glide:glide:${glide}",
+            glideCompiler      : "com.github.bumptech.glide:compiler:${glideCompiler}",
+            glideInterceptor   : "com.github.bumptech.glide:okhttp3-integration:${glideCompiler}",
+            glideTransformation: "jp.wasabeef:glide-transformations:${glideTransformation}",
+
+
+            gson               : "com.google.code.gson:gson:${gson}",
+            dexter             : "com.karumi:dexter:${dexter}",
+
+
+            koinScope          : "org.koin:koin-androidx-scope:${koinVersion}",
+            koinViewModel      : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            koinExt            : "org.koin:koin-androidx-ext:${koinVersion}",
+
+
+    ]
+
+
+    diDependencies = [
+            kotlin       : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            koinScope    : "org.koin:koin-androidx-scope:${koinVersion}",
+            koinViewModel: "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            koinExt      : "org.koin:koin-androidx-ext:${koinVersion}",
+            timber       : "com.jakewharton.timber:timber:${timber}",
+            multiDex     : "androidx.multidex:multidex:${multiDex}"
+    ]
+
+    dataDependencies = [
+            kotlin: "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            room : "androidx.room:room-runtime:${roomVersion}",
+            roomCompiler : "androidx.room:room-compiler:${roomCompiler}"
+
+    ]
+
+
+    httpRetroDependencies = [
+            retroInit        : "com.squareup.retrofit2:retrofit:${retro}",
+            retroGson        : "com.squareup.retrofit2:converter-gson:${retro}",
+            retroRX          : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${retroRX}",
+            gson             : "com.google.code.gson:gson:${gson}",
+            okhttp           : "com.squareup.okhttp3:okhttp:${okhttp}",
+            okhttpConnection : "com.squareup.okhttp3:okhttp-urlconnection:${okhttpConnection}",
+            okhttpInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttpInterceptor}"
+    ]
+
+
+
+    utilsDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            appCompat          : "androidx.appcompat:appcompat:${appCompatX}",
+            coreKtx            : "androidx.core:core-ktx:${appCompatX}",
+            palette            : "androidx.palette:palette:${material}",
+            constraintLayout   : 'androidx.constraintlayout:constraintlayout:1.1.3',
+            material           : "com.google.android.material:material:${material}",
+            extension          : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+
+            glide              : "com.github.bumptech.glide:glide:${glide}",
+            glideCompiler      : "com.github.bumptech.glide:compiler:${glideCompiler}",
+            glideInterceptor   : "com.github.bumptech.glide:okhttp3-integration:${glideCompiler}",
+            glideTransformation: "jp.wasabeef:glide-transformations:${glideTransformation}",
+
+            rxJava             : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxKotlin           : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+
+
+            gson               : "com.google.code.gson:gson:${gson}",
+            dexter             : "com.karumi:dexter:${dexter}",
+            timber             : "com.jakewharton.timber:timber:${timber}",
+
+            okhttp             : "com.squareup.okhttp3:okhttp:${okhttp}",
+            okhttpConnection   : "com.squareup.okhttp3:okhttp-urlconnection:${okhttpConnection}",
+            okhttpInterceptor  : "com.squareup.okhttp3:logging-interceptor:${okhttpInterceptor}"
+    ]
+
+    applicationDependencies = [
+            kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlinVersion}",
+            appCompat          : "androidx.appcompat:appcompat:${appCompatX}",
+            coreKtx            : "androidx.core:core-ktx:${appCompatX}",
+            constraintLayout   : "com.android.support.constraint:constraint-layout:${constraintLayout}",
+            material           : "com.google.android.material:material:${material}",
+            extension          : "androidx.lifecycle:lifecycle-extensions:${lifecycleVersion}",
+            multiDex           : "androidx.multidex:multidex:${multiDex}",
+            timber             : "com.jakewharton.timber:timber:${timber}",
+            dexter             : "com.karumi:dexter:${dexter}",
+
+            rxJava             : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            rxKotlin           : "io.reactivex.rxjava2:rxkotlin:${rxKotlinVersion}",
+            rxAndroid          : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+
+            koinScope          : "org.koin:koin-androidx-scope:${koinVersion}",
+            koinViewModel      : "org.koin:koin-androidx-viewmodel:${koinVersion}",
+            koinExt            : "org.koin:koin-androidx-ext:${koinVersion}",
+
+            glide              : "com.github.bumptech.glide:glide:${glide}",
+            glideCompiler      : "com.github.bumptech.glide:compiler:${glideCompiler}",
+            glideInterceptor   : "com.github.bumptech.glide:okhttp3-integration:${glideCompiler}",
+            glideTransformation: "jp.wasabeef:glide-transformations:${glideTransformation}",
+
+    ]
+
+
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">base</string>
+    <string name="upload_image_permission">يرجى السماح بتلك الصلاحيه من اجل رفع الصور</string>
+    <string name="settings">الاعدادات</string>
+    <string name="cancel">اغلاق</string>
+    <string name="access_location_permission">يرجى السماح بتلك الصلاحيه من اجل تحديد موقعك</string>
+    <string name="server_connect_error">حدث خطأ فى الاتصال بالسيرفر يرجى المحاوله لاحقا</string>
+</resources>

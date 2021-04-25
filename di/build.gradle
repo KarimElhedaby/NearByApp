@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // For Kotlin projects
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    def diDependencies = rootProject.ext.diDependencies
+    implementation diDependencies.kotlin
+    implementation diDependencies.koinScope
+    implementation diDependencies.koinViewModel
+    implementation diDependencies.koinExt
+    implementation diDependencies.timber
+    implementation diDependencies.multiDex
+    implementation project(path: ':utils')
+    implementation project(path: ':data')
+
+
+    def httpRetroImplementation = rootProject.ext.httpRetroDependencies
+    implementation httpRetroImplementation.retroInit
+    implementation httpRetroImplementation.retroGson
+    implementation httpRetroImplementation.retroRX
+    implementation httpRetroImplementation.gson
+    implementation httpRetroImplementation.okhttp
+    implementation httpRetroImplementation.okhttpConnection
+    implementation httpRetroImplementation.okhttpInterceptor
+
+    //DEBUG
+    debugImplementation 'com.github.Commit451:Hyperion-Chuck:1.0.0'
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+}

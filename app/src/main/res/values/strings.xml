@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NearBy App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="no_data">Not found data  !"\n" try change your location</string>
+    <string name="some_error">Some thing went wrong</string>
+
+</resources>

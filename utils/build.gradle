@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    def utilsDependencies=rootProject.ext.utilsDependencies
+
+    implementation utilsDependencies.kotlin
+
+    implementation utilsDependencies.appCompat
+    implementation utilsDependencies.coreKtx
+    implementation utilsDependencies.palette
+    implementation utilsDependencies.constraintLayout
+
+
+    implementation utilsDependencies.extension
+
+
+
+    implementation utilsDependencies.glide
+    kapt utilsDependencies.glideCompiler
+    implementation utilsDependencies.glideInterceptor
+    implementation utilsDependencies.glideTransformation
+
+    implementation utilsDependencies.gson
+    implementation utilsDependencies.dexter
+    implementation utilsDependencies.timber
+
+
+    implementation utilsDependencies.rxJava
+    implementation utilsDependencies.rxKotlin
+    implementation utilsDependencies.rxAndroid
+
+    implementation utilsDependencies.okhttp
+    implementation utilsDependencies.okhttpConnection
+    implementation utilsDependencies.okhttpInterceptor
+
+}

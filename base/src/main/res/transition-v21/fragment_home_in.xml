@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:startDelay="300">
+
+
+    <slide
+        android:duration="200"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/unAuthLayout" />
+        </targets>
+    </slide>
+
+    <slide
+        android:duration="250"
+        android:slideEdge="top">
+        <targets>
+            <target android:targetId="@+id/homeHeaderTV" />
+            <target android:targetId="@+id/homeGreetingTV" />
+            <target android:targetId="@+id/notificationsBtn" />
+        </targets>
+    </slide>
+
+
+    <fade
+        android:duration="250"
+        android:startDelay="150">
+        <targets>
+            <target android:targetId="@+id/symptomsHeader" />
+            <target android:targetId="@+id/chipsInputLayout" />
+            <target android:targetId="@+id/attachmentHeader" />
+            <target android:targetId="@+id/sizeInfoBtn" />
+            <target android:targetId="@+id/attachmentsHolder" />
+            <target android:targetId="@+id/attachmentMessageTV" />
+            <target android:targetId="@+id/timingHolder" />
+            <target android:targetId="@+id/timingHeader" />
+            <target android:targetId="@+id/nowCheckbox" />
+        </targets>
+    </fade>
+
+
+    <slide
+        android:duration="250"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/orTV" />
+            <target android:targetId="@+id/callFab" />
+            <target android:targetId="@+id/chatFab" />
+            <target android:targetId="@+id/submitBtn" />
+            <target android:targetId="@+id/bottom_sheet" />
+        </targets>
+    </slide>
+
+</transitionSet>

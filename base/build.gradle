@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    buildToolsVersion globalConfiguration["androidBuildToolsVersion"]
+
+
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    def baseDependencies=rootProject.ext.baseDependencies
+
+
+    implementation baseDependencies.constraintLayout
+    implementation baseDependencies.appCompat
+    implementation baseDependencies.coreKtx
+    implementation baseDependencies.material
+
+    implementation baseDependencies.extension
+
+
+    implementation baseDependencies.koinScope
+    implementation baseDependencies.koinViewModel
+    implementation baseDependencies.koinExt
+
+
+    implementation baseDependencies.rxJava
+    implementation baseDependencies.rxKotlin
+    implementation baseDependencies.rxAndroid
+
+
+    implementation baseDependencies.gson
+
+
+    implementation baseDependencies.glide
+
+
+
+    implementation baseDependencies.dexter
+    implementation project(path: ':di')
+    implementation project(path: ':utils')
+}

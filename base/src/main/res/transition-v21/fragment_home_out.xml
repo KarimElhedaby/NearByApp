@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <fade android:duration="250">
+        <targets>
+            <target android:targetId="@+id/unAuthLayout" />
+        </targets>
+    </fade>
+
+
+    <slide
+        android:duration="250"
+        android:slideEdge="top">
+        <targets>
+            <target android:targetId="@+id/homeHeaderTV" />
+            <target android:targetId="@+id/homeGreetingTV" />
+            <target android:targetId="@+id/notificationsBtn" />
+        </targets>
+    </slide>
+
+
+    <fade
+        android:duration="250"
+        android:startDelay="50">
+        <targets>
+            <target android:targetId="@+id/symptomsHeader" />
+            <target android:targetId="@+id/attachmentHeader" />
+            <target android:targetId="@+id/sizeInfoBtn" />
+            <target android:targetId="@+id/attachmentsHolder" />
+            <target android:targetId="@+id/timingHolder" />
+            <target android:targetId="@+id/timingHeader" />
+        </targets>
+    </fade>
+
+
+    <slide
+        android:duration="250"
+        android:slideEdge="bottom">
+        <targets>
+            <target android:targetId="@+id/callFab" />
+            <target android:targetId="@+id/chatFab" />
+            <target android:targetId="@+id/submitBtn" />
+        </targets>
+    </slide>
+
+</transitionSet>
