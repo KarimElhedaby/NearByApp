@@ -17,9 +17,10 @@ class NearByPlacesPresenter(private val dataManager: DataManager) :
         if (isFirstRequestCall)
             view?.showLoading()
 
-        val latLang =
-            "40.74224,-73.99386"
-//        "$lat,$long"
+        val latLang = "$lat,$long"
+
+//            "40.74224,-73.99386"
+
 
         compositeDisposable.addAll(
             dataManager.getNearByPlaces(latLang)
